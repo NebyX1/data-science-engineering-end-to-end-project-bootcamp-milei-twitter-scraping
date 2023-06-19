@@ -15,13 +15,13 @@ Adicionalmente, se solicitan recomendaciones basadas en los datos que surjan.
 #Nuestra hipótesis de trabajo principal plantea que el promedio de tweets con "mensajes de odio" hacia el candidato presidenciable Javier Milei al finalizar los 30 días de recolección no será menor al 30%, lo que representaría un escenario negativo para el candidato en términos de cómo lo percibe una gran parte del electorado. Adicionalmente, proponemos las siguientes hipótesis secundarias basadas en franjas: si el promedio de mensajes de odio se encuentra entre un 15% y un 29%, consideraremos que Milei se encuentra en un nivel medio aceptable; si este porcentaje es del 14% o menos, se interpretará como un escenario favorable para el candidato; y si supera el 30%, se considerará un escenario preocupante para Milei.
 
 -Diseñar la estrategia para cumplir con el objetivo
-#Decidimos crear un proyecto integral de ingeniería y analítica de datos, utilizando el lenguaje de programación Python como principal herramienta de trabajo. Primero, crearemos un script que recolecte los datos diariamente y los guarde en tablas diarias dentro de un sistema de gestión de bases de datos relacionales(SQL). A continuación, crearemos un modelo de clasificación de los tweets recogidos, que nos indicará si es un tweet de odio o no, y guardará los promedios diarios recogidos en otra tabla. Finalmente, realizaremos un análisis de series temporales para elaborar un escenario prospectivo a corto plazo (7 días).
+#Decidimos crear un proyecto integral de ingeniería y analítica de datos, utilizando el lenguaje de programación Python como principal herramienta de trabajo. Primero,  crearemos un modelo de clasificación de los tweets recogidos, que nos indicará si es un tweet de odio o no, y guardará los promedios diarios recogidos en otra tabla. A continuación, crearemos un script que recolecte los datos diariamente y los guarde en tablas diarias dentro de un sistema de gestión de bases de datos relacionales(SQL). Finalmente, realizaremos un análisis de series temporales para elaborar un escenario prospectivo a corto plazo (7 días).
 
 -Obtener datos etiquetados de calidad para poder entrenar el modelo
 #Hemos decidido recurrir a un dataset público y open source en Kaggle, que ya tiene etiquetados miles de tweets de odio. Los datos se limpiarán y normalizarán, ya que es un dataset bastante disparejo y necesita ser preprocesado.
 
 -Entrenar el modelo de clasificación de textos de acuerdo a nuestras necesidades
-#Utilizaremos el módulo de clasificación de PyCaret y algunos módulos de la librería scikit-learn para procesar y trabajar con texto. Dejaremos que PyCaret elija el mejor modelo de clasificación y luego aplicaremos fine-tuning.
+#Utilizaremos el módulo de clasificación de PyCaret y algunos módulos de la librería scikit-learn para procesar y trabajar con texto. Dejaremos que PyCaret elija el mejor modelo de clasificación.
 
 -Recoger tweets sobre el tema objetivo a lo largo de distintos días de forma consecutiva diaria
 #Aplicaremos un script propio, diseñado para la recolección de tweets sobre el tema en cuestión, con filtro de fecha y región.
@@ -30,7 +30,4 @@ Adicionalmente, se solicitan recomendaciones basadas en los datos que surjan.
 #Hemos decidido optar por alojar los datos en un Sistema de Gestión de Bases de Datos Local: PostgreSQL.
 
 -Crear una serie temporal para plantear el escenario prospectivo
-#Aplicaremos el módulo de PyCaret de series temporales y dejaremos que PyCaret elija el mejor modelo, aplicaremos fine-tuning.
-
--Presentación del informe de investigación con los principales hallazgos y recomendaciones
-#Estructura del informe: 1-Introducción, 2-Hipótesis, 3-Teoría Pertinente, 4-Hallazgos, 5-Escenario Proyectado y 6-Recomendaciones.
+#Aplicaremos el módulo de PyCaret de series temporales y dejaremos que PyCaret elija el mejor modelo.
