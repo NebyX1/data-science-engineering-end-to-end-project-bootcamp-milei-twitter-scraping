@@ -1,0 +1,6 @@
+Pipeline 1 (Jupyter Notebooks):
+Bajar el Dataset > Descripción del Dataset > Limpiar el Dataset > Normalizar Dataset > Entrenar Modelo > Probar Modelo
+
+Pipeline 2:
+Scrapear Tweets > Limpiar Tweets > Traducir Tweets > Analítica de Sentimientos con TextBlob > Aplicar Modelo > Guardar en Base de Datos > Análisis de Frecuencia de Palabras > Piechart % de Tweets por categoría > Series Temporales > Detección de Anomalías >  Presentar en Flask
+

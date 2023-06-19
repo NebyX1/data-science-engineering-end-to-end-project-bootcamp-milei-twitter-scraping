@@ -1,0 +1,19 @@
+Paso 0: (Opcional) Clonar Repositorio
+>git clone https://github.com/NebyX1/data-science-engineering-end-to-end-project-bootcamp-milei-twitter-scraping
+
+Paso 1: Crear el entorno virutal en la carpeta del proyecto:
+>python -m virtualenv venv
+
+Paso 2: Para activar el entorno virtual para empezar a trabajar, solo hay que escribir en la carpeta raíz:
+>venv\Scripts\activate
+
+Paso 3: Instalar todas las librerías y dependencias que usaremos dentro de nuestro entorno virtual
+    -Escribir el siguiente comando: pip install -r requirements.txt
+
+Paso 4: Antes de corre a Lugi, es necesario correr el Manager de Luigi, para ello hay que poner este comando en consola: 
+    -luigid
+
+Paso 5: La dirección del mismo generalmente es: http://localhost:8082/static/visualiser/index.html
+
+Paso 6: El paso final es ejecutar nuestro script orquestador
+    -Poner en consola: python luigi_pipeline_script.py
